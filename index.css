@@ -1,0 +1,87 @@
+.ar-logo{
+   width: 100px; 
+}
+.header{
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+    align-items: center; 
+    border: 1px solid grey;
+}
+.nav-items{
+    padding: 5px;
+    padding: auto;
+}
+.nav-items > ul{
+    display:flex;
+    list-style-type: none;
+   padding: 0; 
+   margin-left: 500px; 
+
+}
+
+.nav-items > ul > li {
+    padding: 0 10px; 
+}
+.cart-icon{
+    width: 18px;
+    height: 13px;
+}
+
+.restaurent-card{
+    width: 200px;
+    height: 300px;
+    padding: 10px;
+    margin: 3px;
+    border: 0.1px solid grey;
+}
+.restaurent-container{
+    width: 100%;
+    justify-content: center; 
+    display: flex;
+    flex-wrap: wrap;
+}
+.restaurent-card:hover{
+    cursor:pointer;
+    border: 2px solid maroon;
+}
+.restaurent-card-img{
+    width: 100%;
+    height: 50%;
+}
+
+.restaurent-card-text{
+    font-size: 15px;
+    padding-bottom: 30px;
+    align-content:center ;
+}
+.search{
+    padding: 10px 70px;
+    margin: 5px;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.footer-section{
+    padding-right: 20px;
+}
+  
+.footer h4{
+margin-top: 5px;
+margin-bottom: 0px;
+}
+  
+.footer h5{
+    margin: 0px;
+    line-height: 1;
+}
+
+
+.search-button{
+    margin-left: 5px;
+}

@@ -84,7 +84,6 @@ const subTitle2 = React.createElement("h1", { id: "heading" }, [
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(subTitle2);
-
 //using multiple component in render
 // root.render(
 //   <div>
