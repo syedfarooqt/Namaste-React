@@ -47,7 +47,7 @@
 }
 .restaurent-card-img{
     width: 100%;
-}
+    }
 
 .restaurent-card-text{
     font-size: 15px;
@@ -81,4 +81,9 @@ margin-bottom: 0px;
 
 .search-button{
     margin-left: 5px;
+}
+
+.rating-filter-btn{
+    margin: 5px;
+    margin-left: 75px;
 }
