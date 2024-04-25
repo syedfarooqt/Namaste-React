@@ -6,4 +6,6 @@
  const CART_URL =
   "https://t3.ftcdn.net/jpg/03/14/84/68/360_F_314846831_5jJsC7Us9obgwMjRDqFhs04dodzvnZvi.jpg";
 
-export { LOGO_URL,CDN_URL,CART_URL };
+  const SWIGGY_URL="https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.89960&lng=80.22090&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+
+export { LOGO_URL,CDN_URL,CART_URL ,SWIGGY_URL};

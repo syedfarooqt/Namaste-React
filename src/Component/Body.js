@@ -1,9 +1,30 @@
 import Restaurent from "./Restaurent";
 import resList from "../Utils/mockData";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { SWIGGY_URL } from "../Utils/constants";
 
 const Body = () => {
-  const [listOfRestaurants, setListOfRestaurants] = useState(resList);
+  const [listOfRestaurants, setListOfRestaurants] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    console.log("printed data started");
+    console.log(SWIGGY_URL);
+
+    const data = await fetch(SWIGGY_URL);
+    const json = await data.json();
+    //option chaining
+    const result =
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants;
+    console.log(result);
+    console.log("printed data completed");
+    // const json = await data.json;
+    setListOfRestaurants(result);
+  };
   return (
     <div className="body">
       <div className="search">
