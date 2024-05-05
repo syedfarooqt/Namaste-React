@@ -74,8 +74,11 @@ const Body = () => {
       </button>
       <div className="restaurent-container">
         {filteredRestaurents.map((restaurent) => (
-          <Link to={"/restaurent/" + restaurent.info.id}>
-            <Restaurent key={restaurent.info.id} resData={restaurent} />
+          <Link
+            key={restaurent.info.id}
+            to={"/restaurent/" + restaurent.info.id}
+          >
+            <Restaurent resData={restaurent} />
           </Link>
         ))}
       </div>
