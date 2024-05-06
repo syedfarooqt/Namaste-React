@@ -18,6 +18,9 @@ const Header = () => {
       <div className="nav-items">
         <ul>
           <li>
+            <Link to="/Grocery">Grocery Store</Link>
+          </li>
+          <li>
             <Link to="/">Home</Link>
           </li>
           <li>

@@ -1,4 +1,5 @@
 import { CDN_URL } from "../Utils/constants";
+import useOnlineStatus from "../Utils/useOnlineStatus";
 
 const Restaurent = (props) => {
   const { resData } = props;
@@ -12,6 +13,8 @@ const Restaurent = (props) => {
   } = resData?.info;
   //other distrcturing above have done in line destructing
   //const { deliveryTime } = sla;
+  const val = useOnlineStatus();
+
   return (
     <div className="restaurent-card">
       <img

@@ -3,6 +3,7 @@ import Shimmer from "./Shimmer";
 import { useState } from "react";
 import useRestaurantMenu from "../Utils/useRestaurantMenu";
 import { useParams } from "react-router-dom";
+import useOnlineStatus from "../Utils/useOnlineStatus";
 
 const RestaurentMenu = () => {
   const { resId } = useParams();
@@ -20,7 +21,9 @@ const RestaurentMenu = () => {
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card
       ?.itemCards || [];
 
-  console.log(items);
+  console.log(useOnlineStatus);
+
+  if (useOnlineStatus == false) <h1>Oops,Kindly Check Your Internet</h1>;
   return (
     <div>
       <h1>Menu</h1>
