@@ -4,8 +4,11 @@ import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../Utils/useOnlineStatus";
 import userDetail from "../Utils/UserDetail";
-
+import { useSelector, connect } from "react-redux";
+import ItemList from "./ItemList";
 const Header = () => {
+  const cartItems = useSelector((store) => store.cart.items);
+  console.log(cartItems);
   const { Name } = useContext(userDetail);
   const val = useOnlineStatus();
   const [loginButton, setLoginButton] = useState("login");
@@ -44,7 +47,11 @@ const Header = () => {
               Enquiry
             </Link>
           </li>
-          <li className="px-4 flex	">Cart</li>
+          <li className="px-4 flex">
+            <Link className="px-4" to="/cart">
+              Cart({cartItems.length})
+            </Link>
+          </li>
           <li>
             <button
               className="border border-gray-950  border-solid  px-4 py-1 mx-2 md-5"

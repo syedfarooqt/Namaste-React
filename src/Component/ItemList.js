@@ -1,6 +1,14 @@
+import { useDispatch } from "react-redux";
 import { CDN_URL } from "../Utils/constants";
+import { AddItemToCart } from "../Utils/cartSlice";
+useDispatch;
 const ItemList = ({ res }) => {
-  console.log(res);
+  const dispatch = useDispatch();
+
+  const handleAddItem = (r) => {
+    console.log();
+    dispatch(AddItemToCart(r));
+  };
   return (
     <div className="border-b-2 font-semibold flex flex-wrap  justify-between">
       <div className="flex flex-wrap">
@@ -22,7 +30,13 @@ const ItemList = ({ res }) => {
               </div>
             </div>
             <div className="w-3/12 ">
-              <label className="absolute border bg-black text-white rounded-lg px-1 mx-10 ">
+              <label
+                className="absolute border bg-black text-white rounded-lg px-1 mx-10 hover:cursor-pointer"
+                onClick={() => {
+                  console.log("clicked");
+                  handleAddItem(r);
+                }}
+              >
                 + Add
               </label>
 

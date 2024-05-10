@@ -24,7 +24,7 @@ const RestaurentMenu = () => {
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       (val) => val.card?.card?.["@type"] === restMenuListUrl
     );
-  console.log(catagories);
+  // console.log(catagories);
   // const items =
   //   resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card
   //     ?.itemCards || [];

@@ -28,8 +28,6 @@ const RestaurentCategory = ({
   };
   return (
     <div className=" w-9/12 m-auto  bg-gray-100 shadow-xl border-b-2  from-neutral-600 hover:cursor-pointer p-4">
-      {/** header*/}
-      {/** body-name,price,image*/}
       <div
         className="flex flex-wrap  justify-between font-extrabold"
         onClick={handleClick}
