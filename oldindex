@@ -1,0 +1,145 @@
+/* .ar-logo{
+   width: 100px; 
+}
+.header{
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+    align-items: center; 
+    border: 1px solid grey;
+}
+.nav-items{
+    padding: 5px;
+    padding: auto;
+}
+.nav-items > ul{
+    display:flex;
+    list-style-type: none;
+   padding: 0; 
+   margin-left: 500px;
+}
+
+.nav-items > ul > li {
+    padding: 0 10px; 
+}
+.cart-icon{
+    width: 18px;
+    height: 13px;
+}
+
+.restaurent-card{
+    width: 200px;
+    padding: 10px;
+    margin: 3px;
+    border: 0.1px solid grey;
+}
+.restaurent-container{
+    width: 100%;
+    justify-content: center; 
+    display: flex;
+    flex-wrap: wrap;
+    margin: 05px;
+}
+.restaurent-card:hover{
+    cursor:pointer;
+    border: 2px solid maroon;
+}
+.restaurent-card-img{
+    width: 100%;
+    }
+
+.restaurent-card-text{
+    font-size: 15px;
+}
+.search{
+    padding: 10px 70px;
+    margin: 5px;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.footer-section{
+    padding-right: 20px;
+}
+  
+.footer h4{
+margin-top: 5px;
+margin-bottom: 0px;
+}
+  
+.footer h5{
+    margin: 0px;
+    line-height: 1;
+}
+
+
+.search-button{
+    margin-left: 5px;
+}
+
+.rating-filter-btn{
+    margin: 5px;
+    margin-left: 75px;
+}
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:10px;
+    margin-left: 50px;
+}
+
+.shimmer-card-photo{
+    margin: 10px;
+    padding: 10px;
+    background-color:#f0f0f0 ;
+    width: 200px;
+    height: 250px;
+}
+.shimmer-card-text-1{  
+     margin: 10px;
+    padding: 10px;
+    background-color:#f0f0f0 ;
+    width: 40%;
+    height: 5px;
+}
+.shimmer-card-text-2{  
+    margin: 10px;
+   padding: 10px;
+   background-color:#f0f0f0 ;
+   width: 15%;
+   height: 5px;
+}
+
+.shimmer-search{
+    margin-left: 60px;
+   padding: 10px;
+   background-color:#f0f0f0 ;
+   width: 200px;
+   height: 5px;
+}
+.shimmer-filter-btn{
+    margin-top: 10px;
+    margin-left: 60px;
+   padding: 10px;
+   background-color:#f0f0f0 ;
+   width: 100px;
+   height: 5px;
+}
+
+.login-btn{
+    padding: 5px;
+    margin: 0px 5px;
+    width: 100px;
+    cursor: pointer;
+}
+.user{
+    border: solid black 1px;
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+} */

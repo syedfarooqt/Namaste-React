@@ -3,13 +3,16 @@ import Shimmer from "./Shimmer";
 import { useState } from "react";
 import useRestaurantMenu from "../Utils/useRestaurantMenu";
 import { useParams } from "react-router-dom";
-import useOnlineStatus from "../Utils/useOnlineStatus";
+import RestaurentCategory from "./RestaurentCategory";
+import { restMenuListUrl } from "../Utils/constants.tsx";
 
 const RestaurentMenu = () => {
   const { resId } = useParams();
+  const [showIndex, setShowIndex] = useState(null);
+  const [expandedIndex, setExpandedIndex] = useState(null);
+  const [arrow, setArrow] = useState(null);
 
   const resInfo = useRestaurantMenu(resId);
-  console.log(resInfo);
   if (resInfo === null) return <Shimmer />;
 
   const name = resInfo?.cards[2]?.card?.card?.info?.name || "";
@@ -17,26 +20,49 @@ const RestaurentMenu = () => {
   const costForTwoMessage =
     resInfo?.cards[2]?.card?.card?.info?.costForTwoMessage || "";
 
-  const items =
-    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card
-      ?.itemCards || [];
+  const catagories =
+    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+      (val) => val.card?.card?.["@type"] === restMenuListUrl
+    );
+  console.log(catagories);
+  // const items =
+  //   resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card
+  //     ?.itemCards || [];
 
-  console.log(useOnlineStatus);
+  const items = resInfo?.cards;
 
-  if (useOnlineStatus == false) <h1>Oops,Kindly Check Your Internet</h1>;
+  console.log("resInfo items : " + resInfo);
   return (
-    <div>
-      <h1>Menu</h1>
-      <h2>{name}</h2>
-      <p>
+    <div className="p-4">
+      <h2 className="text-lg font-bold p-4">{name}</h2>
+      <p className="text-base font-bold p-4">
         {cuisines} - {costForTwoMessage}
       </p>
-      <ul>
-        {/* {items.map(item)=>(<h2 key={index}>{item.card.info.category}} */}
-        {items.map((item, index) => (
-          <li key={index}>{item.card.info.name}</li>
+      <div>
+        {/* {items.map(item)=>(<h2 key={index}>{item.card.info.category}}
+        {items.map((item) => (
+          <div>{item.card.info.name}</div>
+        ))} */}
+        {catagories.map((catagories, index) => (
+          <RestaurentCategory
+            key={index}
+            res={catagories?.card?.card}
+            // showCategory={if(index == showIndex){return true}else{returnfalse}}
+            showCategory={(function () {
+              if (index === showIndex) {
+                return true;
+              } else {
+                return false;
+              }
+            })()}
+            arrow={index == showIndex ? "🔝" : "🔻"}
+            setShowIndex={() => setShowIndex(index)}
+            expandedIndex={expandedIndex}
+            setExpandedIndex={setExpandedIndex}
+            // setArrow={() => setArrow(index)}
+          />
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

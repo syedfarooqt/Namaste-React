@@ -8,8 +8,6 @@ const useOnlineStatus = () => {
     window.addEventListener("online", () => {
       setOnlineStatus(true);
     });
-
-    console.log(onlineStatus);
   }, []);
   return onlineStatus;
 };

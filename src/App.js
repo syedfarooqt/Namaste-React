@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createContext, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./Component/Header";
 import Body from "./Component/Body";
@@ -10,20 +10,35 @@ import RestaurentMenu from "./Component/RestaurentMenu";
 import { lazy, Suspense } from "react";
 const Grocery = lazy(() => import("./Component/Grocery"));
 const About = lazy(() => import("./Component/About"));
+import { useContext, useState, createContext } from "react";
+import userDetail from "./Utils/UserDetail";
+import { Provider } from "react-redux";
+// import { appStore } from "./Utils/AppStore";
 
 const App = () => {
+  const { Name } = useContext(userDetail);
+  const [userName, setUserName] = useState(Name);
+  //  const userData = createContext({ userName: userName });
+  // console.log("data");
+  // console.log(data);
   return (
-    <div>
-      <Header />
-      <Outlet />
-      <Footer />
-    </div>
+    <userDetail.Provider value={{ Name: userName, setUserName }}>
+      <div>
+        <Header />
+        <Outlet />
+        <Footer />
+      </div>
+    </userDetail.Provider>
   );
 };
 const AppLoader = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: (
+      // <userDetail.Provider value="changed userName">
+      <App />
+      // </userDetail.Provider>
+    ),
     children: [
       { path: "/", element: <Body /> },
       {

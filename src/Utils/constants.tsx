@@ -10,4 +10,5 @@
 
   const MENU_API="https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.89960&lng=80.22090&catalog_qa=undefined&isMenuUx4=true&restaurantId=";
 
-export { LOGO_URL,CDN_URL,CART_URL ,SWIGGY_URL,MENU_API};
+  const restMenuListUrl="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+export { LOGO_URL,CDN_URL,CART_URL ,SWIGGY_URL,MENU_API,restMenuListUrl};
