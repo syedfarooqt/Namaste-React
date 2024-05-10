@@ -1,0 +1,7 @@
+{  "parcel": {
+    "transformers": {
+      "*.css": ["@parcel/transformer-postcss", "@parcel/transformer-css"]
+    },
+    "postcss": "./src/postcss.config.js" 
+  }
+}
