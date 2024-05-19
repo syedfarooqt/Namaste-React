@@ -1,14 +1,20 @@
-import { Link } from "react-router-dom";
-import { LOGO_URL, CART_URL } from "../Utils/constants";
+import { LOGO_URL } from "../Utils/constants";
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../Utils/useOnlineStatus";
 import userDetail from "../Utils/UserDetail";
-import { useSelector, connect } from "react-redux";
-import ItemList from "./ItemList";
+import { useSelector } from "react-redux";
+import lightThemeImage from "../Utils/ligthTheme.png";
+import darkThemeImage from "../Utils/nightTheme.png";
 const Header = () => {
   const cartItems = useSelector((store) => store.cart.items);
   console.log(cartItems);
+  const [isRight, setIsRight] = useState(false);
+
+  const handleClick = () => {
+    setIsRight(!isRight);
+  };
+
   const { Name } = useContext(userDetail);
   const val = useOnlineStatus();
   const [loginButton, setLoginButton] = useState("login");
@@ -22,7 +28,15 @@ const Header = () => {
           <img alt="AR-Food-logo" className="w-40" src={LOGO_URL} />
         </Link>
       </div>
+
       <div className="flex flex-wrap">
+        <div className="w-6 " onClick={handleClick}>
+          {isRight ? (
+            <img src={lightThemeImage} alt="Light Theme" />
+          ) : (
+            <img src={darkThemeImage} alt="night Theme" />
+          )}
+        </div>
         <ul className="flex flex-wrap underline ">
           <li>
             {val ? <h1 className="px-4 ">📗 Online</h1> : <h1>🟥 Offline</h1>}

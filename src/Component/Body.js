@@ -31,6 +31,7 @@ const Body = () => {
     // console.log(result);
     setListOfRestaurants(result);
     setFilteredRestaurents(result);
+    console.log(result);
   };
 
   // console.log(listOfRestaurants.length);

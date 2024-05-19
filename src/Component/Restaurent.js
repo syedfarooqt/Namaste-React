@@ -7,6 +7,9 @@ const Restaurent = (props) => {
   const data = useContext(userDetail);
   const { Name } = data;
   const { resData } = props;
+  console.log("resData");
+  console.log(resData);
+
   const {
     name,
     cuisines,

@@ -4,7 +4,7 @@ import { useState } from "react";
 import useRestaurantMenu from "../Utils/useRestaurantMenu";
 import { useParams } from "react-router-dom";
 import RestaurentCategory from "./RestaurentCategory";
-import { restMenuListUrl } from "../Utils/constants.tsx";
+import { restMenuListUrl } from "../Utils/constants.js";
 
 const RestaurentMenu = () => {
   const { resId } = useParams();

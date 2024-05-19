@@ -1,7 +1,5 @@
 import { Component } from "react";
 import User from "./User";
-import UserClass from "./UserClass";
-import ContactUs from "./ContactUs";
 
 class About extends Component {
   constructor(props) {

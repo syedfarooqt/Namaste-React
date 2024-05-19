@@ -14,9 +14,12 @@ const Cart = () => {
       </div>
     </div>
   ) : (
-    <div className="items-center justify-center text-center text-4xl py-8">
-      Cart <h1>No Items In Cart</h1>
-    </div>
+    <span className="items-center justify-center text-center  py-8">
+      <div className="items-center justify-center text-center text-4xl py-8">
+        Cart
+      </div>
+      <h1 className="text-xl">No Items In Cart</h1>
+    </span>
   );
 };
 
